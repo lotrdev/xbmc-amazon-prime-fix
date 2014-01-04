@@ -24,6 +24,34 @@
   </extension>
 </addon>
 
+<addon id="script.module.mechanize"
+       name="mechanize"
+       version="0.2.5"
+       provider-name="wwwsearch.sourceforge.net/mechanize/">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="script.module.demjson"
+       name="demjson"
+       version="1.4"
+       provider-name="deron.meranda.us">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.program.chrome.launcher" name="Chrome Launcher" version="1.0.7" provider-name="AddonScriptorDE">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -41,6 +69,20 @@
         <forum>http://forum.xbmc.org/showthread.php?tid=170965</forum>
         <email>AddonScriptorDE at yahoo dot de</email>
     </extension>
+</addon>
+
+<addon id="script.module.amazon.database"
+       name="Amazon Database"
+       version="0.0.1"
+       provider-name="BlueCop">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+  </extension>
 </addon>
 
 <addon id="plugin.video.creationtoday_org" version="0.9.0" name="Creation Today" provider-name="Romans I XVI">
