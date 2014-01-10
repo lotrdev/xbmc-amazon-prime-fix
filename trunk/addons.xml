@@ -1,43 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.amazon"
-       name="Amazon"
-       version="0.7.0"
-       provider-name="BlueCop + Romans I XVI">
-  <requires>
-    <import addon="xbmc.python" version="1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.0.8"/>
-    <import addon="script.module.demjson" version="1.4"/>
-    <import addon="script.module.mechanize" version="0.2.5"/>
-    <import addon="script.module.amazon.database" version="0.0.1"/>
-    <import addon="plugin.program.chrome.launcher" version="1.0.7"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-	<provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary>Amazon Prime Video Streaming</summary>
-    <description>Movies and Television Shows for Prime Members[CR][CR]In order to use this addon you must have Chrome Launcher installed.</description>
-    <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-  </extension>
-</addon>
-
-<addon id="script.module.mechanize"
-       name="mechanize"
-       version="0.2.5"
-       provider-name="wwwsearch.sourceforge.net/mechanize/">
-  <requires>
-    <import addon="xbmc.python" version="1.0"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="script.module.demjson"
        name="demjson"
        version="1.4"
@@ -69,6 +31,44 @@
         <forum>http://forum.xbmc.org/showthread.php?tid=170965</forum>
         <email>AddonScriptorDE at yahoo dot de</email>
     </extension>
+</addon>
+
+<addon id="script.module.mechanize"
+       name="mechanize"
+       version="0.2.5"
+       provider-name="wwwsearch.sourceforge.net/mechanize/">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.amazon"
+       name="Amazon"
+       version="0.7.1"
+       provider-name="BlueCop + Romans I XVI">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="script.module.demjson" version="1.4"/>
+    <import addon="script.module.mechanize" version="0.2.5"/>
+    <import addon="script.module.amazon.database" version="0.0.1"/>
+    <import addon="plugin.program.chrome.launcher" version="1.0.7"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Amazon Prime Video Streaming</summary>
+    <description>Movies and Television Shows for Prime Members[CR][CR]In order to use this addon you must have Chrome Launcher installed.</description>
+    <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  </extension>
 </addon>
 
 <addon id="script.module.amazon.database"
