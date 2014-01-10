@@ -22,8 +22,6 @@ def LIST_TV_ROOT():
     common.addDir('Favorited','listtv','LIST_TVSHOWS_FAVOR_FILTERED',cm=cm)
     cm = [('Export All to Library', 'XBMC.RunPlugin(plugin://plugin.video.amazon?mode="listtv"&sitemode="LIST_TVSHOWS_EXPORT"&url="")' )]
     common.addDir('All Shows','listtv','LIST_TVSHOWS',cm=cm)
-    cm = [('Export HDTV to Library', 'XBMC.RunPlugin(plugin://plugin.video.amazon?mode="listtv"&sitemode="LIST_HDTVSHOWS_EXPORT"&url="")' )]
-    common.addDir('HDTV Shows','listtv','LIST_HDTVSHOWS',cm=cm)
     common.addDir('Genres','listtv','LIST_TVSHOWS_TYPES','GENRE' )
     common.addDir('Years','listtv','LIST_TVSHOWS_TYPES','YEARS' )
     common.addDir('Networks','listtv','LIST_TVSHOWS_TYPES','NETWORKS')
@@ -248,14 +246,14 @@ def ADD_SEASON_ITEM(seasondata,mode='listtv',submode='LIST_EPISODES_DB',seriesTi
     else: displayname += 'Specials'
     if isHD: displayname += ' [COLOR FFE47911][HD][/COLOR]'
     cm = []
-    if inWatchlist:
-        cm.append( ('Remove from Watchlist', 'XBMC.RunPlugin(%s?mode="common"&sitemode="removeTVWatchlist"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(asin) ) ) )
-    else:
-        cm.append( ('Add to Watchlist', 'XBMC.RunPlugin(%s?mode="common"&sitemode="addTVWatchlist"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(asin) ) ) )
+    #if inWatchlist:
+    #    cm.append( ('Remove from Watchlist', 'XBMC.RunPlugin(%s?mode="common"&sitemode="removeTVWatchlist"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(asin) ) ) )
+    #else:
+    #    cm.append( ('Add to Watchlist', 'XBMC.RunPlugin(%s?mode="common"&sitemode="addTVWatchlist"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(asin) ) ) )
     cm.append( ('Export to Library', 'XBMC.RunPlugin(plugin://plugin.video.amazon?mode="xbmclibrary"&sitemode="EXPORT_SEASON"&asin="%s")' % ( urllib.quote_plus(asin) ) ) )
-    if common.addon.getSetting("editenable") == 'true':
-        cm.append( ('Rename Season', 'XBMC.RunPlugin(%s?mode="tv"&sitemode="renameSeasondb"&title="%s"&season="%s"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(seriestitle), str(season),urllib.quote_plus(asin) ) ) )
-        cm.append( ('Remove Season', 'XBMC.RunPlugin(%s?mode="tv"&sitemode="deleteSeasondb"&title="%s"&season="%s"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(seriestitle), str(season),urllib.quote_plus(asin) ) ) )
+    #if common.addon.getSetting("editenable") == 'true':
+     #   cm.append( ('Rename Season', 'XBMC.RunPlugin(%s?mode="tv"&sitemode="renameSeasondb"&title="%s"&season="%s"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(seriestitle), str(season),urllib.quote_plus(asin) ) ) )
+    #    cm.append( ('Remove Season', 'XBMC.RunPlugin(%s?mode="tv"&sitemode="deleteSeasondb"&title="%s"&season="%s"&asin="%s")' % ( sys.argv[0], urllib.quote_plus(seriestitle), str(season),urllib.quote_plus(asin) ) ) )
     #try:fanart = common.args.fanart
     #except:
     fanart = poster
