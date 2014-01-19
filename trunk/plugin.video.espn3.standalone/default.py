@@ -14,17 +14,17 @@ import xml.etree.ElementTree as ET
 
 ## Get the settings
 
-selfAddon = xbmcaddon.Addon(id='plugin.video.espn3')
+selfAddon = xbmcaddon.Addon(id='plugin.video.espn3.standalone')
 cbrowser=selfAddon.getSetting('browser')
 if cbrowser is '' or cbrowser is None:
     # Default to Firefox
     cbrowser = "Firefox"
 usexbmc = selfAddon.getSetting('watchinxbmc')
-defaultimage = 'special://home/addons/plugin.video.espn3/icon.png'
-defaultfanart = 'special://home/addons/plugin.video.espn3/fanart.jpg'
-defaultlive = 'special://home/addons/plugin.video.espn3/live.png'
-defaultreplay = 'special://home/addons/plugin.video.espn3/replay.png'
-defaultupcoming = 'special://home/addons/plugin.video.espn3/upcoming.png'
+defaultimage = 'special://home/addons/plugin.video.espn3.standalone/icon.png'
+defaultfanart = 'special://home/addons/plugin.video.espn3.standalone/fanart.jpg'
+defaultlive = 'special://home/addons/plugin.video.espn3.standalone/live.png'
+defaultreplay = 'special://home/addons/plugin.video.espn3.standalone/replay.png'
+defaultupcoming = 'special://home/addons/plugin.video.espn3.standalone/upcoming.png'
 
 if usexbmc is '' or usexbmc is None:
     usexbmc = True
@@ -33,12 +33,12 @@ pluginpath = selfAddon.getAddonInfo('path')
 pluginhandle = int(sys.argv[1])
 
 #if selfAddon.getSetting('enablecustom') == 'true':
-#    ADDONDATA = xbmc.translatePath('special://profile/addon_data/plugin.video.espn3/custom/')
-#    ADDONDATAORG = xbmc.translatePath('special://profile/addon_data/plugin.video.espn3/')
+#    ADDONDATA = xbmc.translatePath('special://profile/addon_data/plugin.video.espn3.standalone/custom/')
+#    ADDONDATAORG = xbmc.translatePath('special://profile/addon_data/plugin.video.espn3.standalone/')
 #    COOKIEFILEORG = os.path.join(ADDONDATAORG,'cookies.lwp')
 #    USERFILEORG = os.path.join(ADDONDATAORG,'userdata.xml')
 #else:
-ADDONDATA = xbmc.translatePath('special://profile/addon_data/plugin.video.espn3/')
+ADDONDATA = xbmc.translatePath('special://profile/addon_data/plugin.video.espn3.standalone/')
 if not os.path.exists(ADDONDATA):
     os.makedirs(ADDONDATA)
 USERFILE = os.path.join(ADDONDATA,'userdata.xml')
