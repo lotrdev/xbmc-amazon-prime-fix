@@ -34,6 +34,7 @@ def PLAYVIDEO():
 	url=common.args.url
 	load_extension='--load-extension='+amazonscript+'" "'
 	#finalUrl=url.replace("http://www.amazon.com/gp/product/","http://www.amazon.com/gp/video/streaming/mini-mode.html?ie=UTF8&asin=")
+	finalUrl=url
 	if settings.getSetting("HD") == 'true':
 		try:
 			req = urllib2.Request(url)
