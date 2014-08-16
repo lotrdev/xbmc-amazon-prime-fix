@@ -16,9 +16,9 @@ pluginhandle = common.pluginhandle
 
 #plugin constants
 __plugin__ = "AMAZON"
-__authors__ = "BlueCop + Romans I XVI"
+__authors__ = "Lotrdev + BlueCop + Romans I XVI"
 __credits__ = ""
-__version__ = "0.7.0"
+__version__ = "0.7.2"
 
 
 print "\n\n\n\n\n\n\n====================AMAZON START====================\n\n\n\n\n\n"
