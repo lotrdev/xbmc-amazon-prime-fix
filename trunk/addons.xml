@@ -1,78 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.chrome.launcher" name="Chrome Launcher" version="1.0.7" provider-name="AddonScriptorDE">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Launch websites via Chrome in Kiosk-mode</summary>
-        <language></language>
-        <description lang="en">Launch websites via Chrome in Kiosk-mode</description>
-        <website></website>
-        <source>https://github.com/AddonScriptorDE/plugin.program.chrome.starter</source>
-        <forum>http://forum.xbmc.org/showthread.php?tid=170965</forum>
-        <email>AddonScriptorDE at yahoo dot de</email>
-    </extension>
-</addon>
-
-<addon id="script.module.mechanize"
-       name="mechanize"
-       version="0.2.5"
-       provider-name="wwwsearch.sourceforge.net/mechanize/">
-  <requires>
-    <import addon="xbmc.python" version="1.0"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="script.module.amazon.database"
-       name="Amazon Database"
-       version="0.0.1"
-       provider-name="BlueCop">
-  <requires>
-    <import addon="xbmc.python" version="1.0"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.creationtoday_org" version="0.9.0" name="Creation Today" provider-name="Romans I XVI">
-    <requires>
-        <import addon="xbmc.python" version="1.0"/>
-        <import addon="script.module.urlresolver" version="0.0.1"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Creation Today</summary>
-        <description>Videos from creationtoday.org</description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
 <addon id="plugin.video.amazon"
        name="Amazon"
-       version="0.7.1"
-       provider-name="BlueCop + Romans I XVI">
+       version="0.7.2"
+       provider-name="Lotrdev + BlueCop + Romans I XVI">
   <requires>
-    <import addon="xbmc.python" version="1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.demjson" version="1.4"/>
-    <import addon="script.module.mechanize" version="0.2.5"/>
-    <import addon="script.module.amazon.database" version="0.0.1"/>
-    <import addon="plugin.program.chrome.launcher" version="1.0.7"/>
+    <import addon="script.module.mechanize" version="0.2.6"/>
+    <import addon="script.module.amazon.database" version="0.0.2"/>
+    <import addon="plugin.program.chrome.launcher" version="1.1.1"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -83,6 +21,20 @@
     <summary>Amazon Prime Video Streaming</summary>
     <description>Movies and Television Shows for Prime Members[CR][CR]In order to use this addon you must have Chrome Launcher installed.</description>
     <disclaimer>Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+  </extension>
+</addon>
+
+<addon id="script.module.amazon.database"
+       name="Amazon Database"
+       version="0.0.2"
+       provider-name="BlueCop">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
   </extension>
 </addon>
 
@@ -100,24 +52,25 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.espn3.standalone"
-       name="ESPN 3"
-       version="1.0.0"
-       provider-name="Ksosez,BlueCop,locomot1f">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.beautifulsoup" version="3.2.1"/>
-    	<import addon="script.module.mechanize" version="0.2.6"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <license>GPL 2.0</license>
-        <summary lang="en">ESPN</summary>
-        <description lang="en">Watch full live streaming sporting events online on ESPN 3, including football, baseball, cricket, soccer, and basketball events.</description>
-    </extension>
+<addon id="script.module.mechanize"
+	name="Mechanize"
+	version="0.2.6"
+	provider-name="Tristan Fischer (sphere)">
+	<requires>
+	<import addon="xbmc.python"
+			version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.module"
+			 library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Stateful programmatic web browsing in Python, after Andy Lesterâ€™s Perl module WWW::Mechanize.</summary>
+		<description lang="en">packed for xbmc from https://github.com/jjlee/mechanize</description>
+		<disclaimer lang="en">packed for xbmc from https://github.com/jjlee/mechanize</disclaimer>
+		<forum></forum>
+		<website>http://wwwsearch.sourceforge.net/mechanize/</website>
+		<license>BSD</license>
+		<platform>all</platform>
+		<source>https://github.com/jjlee/mechanize</source>
+	</extension>
 </addon>
 </addons>
